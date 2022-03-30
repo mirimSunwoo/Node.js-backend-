@@ -3,7 +3,7 @@
 const id = document.querySelector("#id"),
     psword = document.querySelector("#psword"),
     confirmPsword = document.querySelector("#confirm-psword"),
-    name = document.querySelector("#name"),
+    nickname = document.querySelector("#nickname"),
     registerBtn = document.querySelector("#button");
 
     registerBtn.addEventListener("click", register);
@@ -16,7 +16,7 @@ function register(){
         id : id.value,
         psword : psword.value,
         confirmPsword : confirmPsword.value,
-        name : name.value,
+        nickname : nickname.value,
     };
     // console.log(req);
 

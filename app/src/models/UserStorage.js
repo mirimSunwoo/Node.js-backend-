@@ -52,8 +52,8 @@ class UserStorage {
       throw "이미 존재하는 아이디입니다.";
     }
     users.id.push(userInfo.id);
-    // users.name.push(userInfo.name);
     users.psword.push(userInfo.psword);
+    users.nickname.push(userInfo.nickname);
     fs.writeFile("./src/databases/users.json", JSON.stringify(users));
     return { success: true };
   }

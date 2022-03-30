@@ -3,19 +3,20 @@
 const id = document.querySelector("#id"),
     psword = document.querySelector("#psword"),
     confirmPsword = document.querySelector("#confirm-psword"),
-    nickname = document.querySelector("#nickname"),
+    name = document.querySelector("#name"),
     registerBtn = document.querySelector("#button");
 
     registerBtn.addEventListener("click", register);
 
 function register(){
     if(!id.value) return alert("아이디를 입력해주십시오.");
-    if(psword !== confirmPsword) return alert("비밀번호가 일치하지 않습니다.");
+    if(psword.value !== confirmPsword.value) 
+        return alert("비밀번호가 일치하지 않습니다.");
     const req={
         id : id.value,
         psword : psword.value,
         confirmPsword : confirmPsword.value,
-        name : nickname.value,
+        name : name.value,
     };
     // console.log(req);
 
